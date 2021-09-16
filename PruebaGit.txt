@@ -1,13 +1,16 @@
 Grupo PioneerTech
-
 Roles
-
 1. Desarrollador : Sandra Paola Molina
 2. Analista : Diana Sofia Ortiz Letrado
+
 3. Product Owner: Juan Manuel Ortiz Letrado
 4. Administrador de BD: José Fernando Cortés Rozo
 5. Scrum Master: Diana Marcela Mercado Valencia
 
+
 Enlace Repositorio: https://github.com/JuanOrtizLetrado/ProyectoMinTic-Grupo-PioneerTech.git
+
+Version final
+
 
 
