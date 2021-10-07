@@ -1,0 +1,99 @@
+<head>
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
+</head>
+
+<body background="img/fondo1.jpg">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-sm-0 col-md-3"></div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card" align="center">
+          <h5 class="card-header " style="background:blueviolet ">Autenticar</h5>
+          <div class="card-body">
+            <div id="my-signin2"></div>
+            <br>
+            <form action="atenticar1.html">
+              <div class="mb-3">
+                <input type="email" name="correo" class="form-control" placeholder="Correo" required="required">
+              </div>
+              <div class="mb-3">
+                <input type="password" name="clave" class="form-control" placeholder="Clave" required="required">
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-outline-info">Autenticar</button>
+              </div>
+              
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-sm-0 col-md-3"></div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card" align="center">
+          <div class="card-body">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img src="img/cel1.jfif" class="d-block w-100" alt="..." height="450px">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="img/cel2.jfif" class="d-block w-100" alt="..." height="450px">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="img/audi1.jpg" class="d-block w-100" alt="..." height="450px">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+
+    function onFailure(error) {
+      console.log(error);
+    }
+
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
