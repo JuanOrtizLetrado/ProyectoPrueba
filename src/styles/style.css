@@ -33,7 +33,7 @@ h1 {
 .hero {
 	width: 100%;
 	height: 100vh;
-	background: url(../src/img/laptop.png);
+	background: url(../img/laptop.png);
 	
 	background-blend-mode: color-burn;
 	background-repeat: no-repeat;
